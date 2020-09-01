@@ -1,4 +1,4 @@
-package com.fajar.entityprops.util;
+package com.github.fajaralmu.entityprops.util;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -11,7 +11,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import com.fajar.entityprops.annotation.FormField;
+import com.github.fajaralmu.entityprops.annotation.FormField;
 
 import lombok.extern.slf4j.Slf4j;
 

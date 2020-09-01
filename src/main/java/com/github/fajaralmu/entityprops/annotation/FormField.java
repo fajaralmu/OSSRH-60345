@@ -1,11 +1,11 @@
-package com.fajar.entityprops.annotation;
+package com.github.fajaralmu.entityprops.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import com.fajar.entityprops.inputfields.FieldType;
+import com.github.fajaralmu.entityprops.inputfields.FieldType;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)

@@ -1,4 +1,4 @@
-package com.fajar.entityprops.builder;
+package com.github.fajaralmu.entityprops.builder;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -7,9 +7,9 @@ import java.util.List;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import com.fajar.entityprops.annotation.AdditionalQuestionField;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.fajaralmu.entityprops.annotation.AdditionalQuestionField;
 
 import lombok.AccessLevel;
 import lombok.Builder;

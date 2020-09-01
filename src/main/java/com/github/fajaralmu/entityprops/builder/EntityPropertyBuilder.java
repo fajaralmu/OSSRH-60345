@@ -1,4 +1,4 @@
-package com.fajar.entityprops.builder;
+package com.github.fajaralmu.entityprops.builder;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -12,12 +12,12 @@ import javax.persistence.Id;
 
 import org.slf4j.LoggerFactory;
 
-import com.fajar.entityprops.annotation.AdditionalQuestionField;
-import com.fajar.entityprops.annotation.Dto;
-import com.fajar.entityprops.annotation.FormField;
-import com.fajar.entityprops.util.EpCollectionUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.fajaralmu.entityprops.annotation.AdditionalQuestionField;
+import com.github.fajaralmu.entityprops.annotation.Dto;
+import com.github.fajaralmu.entityprops.annotation.FormField;
+import com.github.fajaralmu.entityprops.util.EpCollectionUtil;
 
 public class EntityPropertyBuilder {
 	static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();

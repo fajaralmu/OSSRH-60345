@@ -1,4 +1,4 @@
-package com.fajar.entityprops.builder;
+package com.github.fajaralmu.entityprops.builder;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
@@ -10,16 +10,16 @@ import java.util.Map;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 
-import com.fajar.entityprops.annotation.AdditionalQuestionField;
-import com.fajar.entityprops.annotation.BaseField;
-import com.fajar.entityprops.annotation.FormField;
-import com.fajar.entityprops.inputfields.FieldType;
-import com.fajar.entityprops.util.EntityPropsUtil;
-import com.fajar.entityprops.util.EpCollectionUtil;
-import com.fajar.entityprops.util.EpStringUtil;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.fajaralmu.entityprops.annotation.AdditionalQuestionField;
+import com.github.fajaralmu.entityprops.annotation.BaseField;
+import com.github.fajaralmu.entityprops.annotation.FormField;
+import com.github.fajaralmu.entityprops.inputfields.FieldType;
+import com.github.fajaralmu.entityprops.util.EntityPropsUtil;
+import com.github.fajaralmu.entityprops.util.EpCollectionUtil;
+import com.github.fajaralmu.entityprops.util.EpStringUtil;
 
 import lombok.extern.slf4j.Slf4j;
  

@@ -1,4 +1,4 @@
-package com.fajar.entityprops.annotation;
+package com.github.fajaralmu.entityprops.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

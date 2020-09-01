@@ -1,4 +1,4 @@
-package com.fajar.entityprops.inputfields;
+package com.github.fajaralmu.entityprops.inputfields;
 
 public enum FieldType {
 

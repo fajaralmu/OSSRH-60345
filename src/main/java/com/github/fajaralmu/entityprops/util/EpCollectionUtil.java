@@ -1,4 +1,4 @@
-package com.fajar.entityprops.util;
+package com.github.fajaralmu.entityprops.util;
 
 import java.util.ArrayList;
 import java.util.List;

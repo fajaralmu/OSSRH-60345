@@ -1,4 +1,4 @@
-package com.fajar.entityprops.update;
+package com.github.fajaralmu.entityprops.update;
 
 public abstract class EntityUpdateService<T, ResponseType> {
 

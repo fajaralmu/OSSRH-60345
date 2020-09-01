@@ -1,4 +1,4 @@
-package com.fajar.entityprops;
+package com.github.fajaralmu.entityprops;
 
 /**
  * Hello world!
