@@ -3,7 +3,7 @@
 
 	<groupId>com.github.fajaralmu</groupId>
 	<artifactId>entityprops</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.1.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>entityprops</name>
@@ -14,7 +14,27 @@
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
+	<developers>
+		<developer>
+			<id>fajaralmu</id>
+			<email>somabansga@gmail.com</email>
+			<name>Fajar Al Munawar</name>
+			<timezone>+9</timezone>
+			
+		</developer>
+	</developers>
+	<description>
+		Entity Props gives the simplycity of creating persistence model properties in order to dynamically create CURD form
+		The model built by this library is preferred to be a pestitence entity 
+	</description>
+	<licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
 		<dependency>
