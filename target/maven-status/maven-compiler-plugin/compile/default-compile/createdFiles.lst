@@ -1,0 +1,16 @@
+com\github\fajaralmu\entityprops\App.class
+com\github\fajaralmu\entityprops\annotation\FormField.class
+com\github\fajaralmu\entityprops\update\EntityUpdateService.class
+com\github\fajaralmu\entityprops\builder\EntityElement.class
+com\github\fajaralmu\entityprops\annotation\BaseField.class
+com\github\fajaralmu\entityprops\util\EpCollectionUtil.class
+com\github\fajaralmu\entityprops\builder\EntityPropertyBuilder$1.class
+com\github\fajaralmu\entityprops\builder\EntityPropertyBuilder.class
+com\github\fajaralmu\entityprops\builder\EntityProperty.class
+com\github\fajaralmu\entityprops\util\EntityPropsUtil.class
+com\github\fajaralmu\entityprops\util\EpStringUtil.class
+com\github\fajaralmu\entityprops\annotation\AdditionalQuestionField.class
+com\github\fajaralmu\entityprops\inputfields\FormInputColumn.class
+com\github\fajaralmu\entityprops\annotation\CustomEntity.class
+com\github\fajaralmu\entityprops\annotation\Dto.class
+com\github\fajaralmu\entityprops\inputfields\FieldType.class
