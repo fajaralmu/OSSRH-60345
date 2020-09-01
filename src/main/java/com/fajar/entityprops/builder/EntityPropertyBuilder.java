@@ -54,8 +54,8 @@ public class EntityPropertyBuilder {
 		final boolean ignoreBaseField = dto.ignoreBaseField();
 		final boolean isQuestionare = dto.quistionare();
 
-		EntityProperty entityProperty = EntityProperty.builder().ignoreBaseField(ignoreBaseField)
-				.entityName(clazz.getSimpleName().toLowerCase()).isQuestionare(isQuestionare).build();
+		EntityProperty entityProperty = new EntityProperty(ignoreBaseField, clazz.getSimpleName().toLowerCase(),
+				isQuestionare);
 		try {
 
 			List<Field> fieldList = getDeclaredFields();
@@ -109,12 +109,11 @@ public class EntityPropertyBuilder {
 	}
 
 	private Map<String, List<Field>> sortListByQuestionareSection(List<Field> fieldList) {
-		Map<String, List<Field>> temp = new HashMap<String, List<Field>>(){
+		Map<String, List<Field>> temp = new HashMap<String, List<Field>>() {
 			{
 				put(AdditionalQuestionField.DEFAULT_GROUP_NAME, new ArrayList<>());
 			}
 		};
-		
 
 		String key = AdditionalQuestionField.DEFAULT_GROUP_NAME;
 		for (Field field : fieldList) {
@@ -150,17 +149,10 @@ public class EntityPropertyBuilder {
 			return null;
 		}
 	}
-
-	/**
-	 * get fields of a class, accessible true
-	 * 
-	 * @param clazz
-	 * @return
-	 */
+ 
 	public List<Field> getDeclaredFields() {
 		Field[] baseField = clazz.getDeclaredFields();
-//
-//		List<EntityElement> entityElements = new ArrayList<EntityElement>();
+ 
 		List<Field> fieldList = new ArrayList<>();
 
 		for (Field field : baseField) {

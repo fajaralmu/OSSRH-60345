@@ -1,6 +1,5 @@
 package com.fajar.entityprops.util;
 
-import java.io.Serializable;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -12,54 +11,36 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import org.apache.commons.lang3.SerializationUtils;
-
 import com.fajar.entityprops.annotation.FormField;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class EntityPropsUtil {
-
-	
-	public static void main(String[] args) {
-//		List<Field> fields = getDeclaredFields(StudentParent.class);
-//		fields = sortListByQuestionareSection(fields);
-//		
-//		for (Field field : fields) {
-//			log.debug("{}", field.getName());
-//		}
-//		
-//		Object[] arrayOfFields = fields.toArray();
-	}
+ 
 
 	static boolean isIdField(Field field) {
 		return field.getAnnotation(Id.class) != null;
 	}
 
-	/**
-	 * 
-	 * @param _class
-	 * @return String type field & non empty able
-	 */
-	public static List<Field> getNotEmptyAbleField(Class<?  > _class) {
+	public static List<Field> getNotEmptyAbleField(Class<?> _class) {
 
 		List<Field> result = new ArrayList<>();
 		List<Field> formFieldAnnotatedField = getFormFieldAnnotatedField(_class);
 		for (int i = 0; i < formFieldAnnotatedField.size(); i++) {
 			Field field = formFieldAnnotatedField.get(i);
 			FormField formField = getFieldAnnotation(field, FormField.class);
-			
-			if(field.getType().equals(String.class) && !formField.emptyAble()) {
+
+			if (field.getType().equals(String.class) && !formField.emptyAble()) {
 				result.add(field);
 			}
-			
+
 		}
-		
+
 		return result;
 	}
 
-	public static List<Field> getFormFieldAnnotatedField(Class<? > _class) {
+	public static List<Field> getFormFieldAnnotatedField(Class<?> _class) {
 
 		List<Field> result = new ArrayList<>();
 
@@ -76,7 +57,7 @@ public class EntityPropsUtil {
 		return result;
 	}
 
-		public static <T extends Annotation> T getClassAnnotation(Class<?> entityClass, Class<T> annotation) {
+	public static <T extends Annotation> T getClassAnnotation(Class<?> entityClass, Class<T> annotation) {
 		try {
 			return entityClass.getAnnotation(annotation);
 		} catch (Exception e) {
@@ -122,16 +103,8 @@ public class EntityPropsUtil {
 		return null;
 	}
 
-	/**
-	 * get fields of a class, accessible true
-	 * 
-	 * @param clazz
-	 * @return
-	 */
 	public static List<Field> getDeclaredFields(Class<?> clazz) {
-		Field[] baseField = clazz.getDeclaredFields();
-//
-//		List<EntityElement> entityElements = new ArrayList<EntityElement>();
+		Field[] baseField = clazz.getDeclaredFields(); 
 		List<Field> fieldList = new ArrayList<>();
 
 		for (Field field : baseField) {
@@ -176,12 +149,10 @@ public class EntityPropsUtil {
 				|| field.getType().equals(BigInteger.class);
 	}
 
-	 
- 
 	public static boolean isStaticField(Field field) {
 		return Modifier.isStatic(field.getModifiers());
 	}
- 
+
 	public static <T> T getObjectFromListByFieldName(final String fieldName, final Object value, final List<T> list) {
 
 		for (T object : list) {
@@ -202,35 +173,5 @@ public class EntityPropsUtil {
 
 		return null;
 	}
-
-	public static <T> boolean existInList(T o, List<T> list) {
-		if (null == list) {
-			log.error("LIST IS NULL");
-			return false;
-		}
-		for (T object : list) {
-			if (object.equals(o)) {
-				return true;
-			}
-		}
-		return false;
-	}
-
-	/**
-	 * Clone Serializable Object
-	 * 
-	 * @param <T>
-	 * @param serializable
-	 * @return
-	 */
-	public static <T extends Serializable> T cloneSerializable(T serializable) {
-		try {
-			return SerializationUtils.clone(serializable);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return null;
-		}
-	}
- 
 
 }

@@ -12,25 +12,17 @@ import javax.persistence.JoinColumn;
 
 import com.fajar.entityprops.annotation.AdditionalQuestionField;
 import com.fajar.entityprops.annotation.BaseField;
-import com.fajar.entityprops.annotation.Dto;
 import com.fajar.entityprops.annotation.FormField;
 import com.fajar.entityprops.inputfields.FieldType;
-import com.fajar.entityprops.util.EpCollectionUtil;
 import com.fajar.entityprops.util.EntityPropsUtil;
+import com.fajar.entityprops.util.EpCollectionUtil;
 import com.fajar.entityprops.util.EpStringUtil;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-
-@Data
-@Builder
-@AllArgsConstructor
-@Dto
+ 
 @Slf4j
 public class EntityElement implements Serializable {
 
@@ -297,5 +289,227 @@ public class EntityElement implements Serializable {
 			return "{}";
 		}
 	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getClassName() {
+		return className;
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
+	}
+
+	public boolean isIdentity() {
+		return identity;
+	}
+
+	public void setIdentity(boolean identity) {
+		this.identity = identity;
+	}
+
+	public boolean isRequired() {
+		return required;
+	}
+
+	public void setRequired(boolean required) {
+		this.required = required;
+	}
+
+	public boolean isIdField() {
+		return idField;
+	}
+
+	public void setIdField(boolean idField) {
+		this.idField = idField;
+	}
+
+	public String getLableName() {
+		return lableName;
+	}
+
+	public void setLableName(String lableName) {
+		this.lableName = lableName;
+	}
+
+	public List<Object> getOptions() {
+		return options;
+	}
+
+	public void setOptions(List<Object> options) {
+		this.options = options;
+	}
+
+	public String getJsonList() {
+		return jsonList;
+	}
+
+	public void setJsonList(String jsonList) {
+		this.jsonList = jsonList;
+	}
+
+	public String getOptionItemName() {
+		return optionItemName;
+	}
+
+	public void setOptionItemName(String optionItemName) {
+		this.optionItemName = optionItemName;
+	}
+
+	public String getOptionValueName() {
+		return optionValueName;
+	}
+
+	public void setOptionValueName(String optionValueName) {
+		this.optionValueName = optionValueName;
+	}
+
+	public String getEntityReferenceName() {
+		return entityReferenceName;
+	}
+
+	public void setEntityReferenceName(String entityReferenceName) {
+		this.entityReferenceName = entityReferenceName;
+	}
+
+	public String getEntityReferenceClass() {
+		return entityReferenceClass;
+	}
+
+	public void setEntityReferenceClass(String entityReferenceClass) {
+		this.entityReferenceClass = entityReferenceClass;
+	}
+
+	public boolean isMultiple() {
+		return multiple;
+	}
+
+	public void setMultiple(boolean multiple) {
+		this.multiple = multiple;
+	}
+
+	public boolean isShowDetail() {
+		return showDetail;
+	}
+
+	public void setShowDetail(boolean showDetail) {
+		this.showDetail = showDetail;
+	}
+
+	public String getDetailFields() {
+		return detailFields;
+	}
+
+	public void setDetailFields(String detailFields) {
+		this.detailFields = detailFields;
+	}
+
+	public String[] getDefaultValues() {
+		return defaultValues;
+	}
+
+	public void setDefaultValues(String[] defaultValues) {
+		this.defaultValues = defaultValues;
+	}
+
+	public List<Object> getPlainListValues() {
+		return plainListValues;
+	}
+
+	public void setPlainListValues(List<Object> plainListValues) {
+		this.plainListValues = plainListValues;
+	}
+
+	public String getInputGroupname() {
+		return inputGroupname;
+	}
+
+	public void setInputGroupname(String inputGroupname) {
+		this.inputGroupname = inputGroupname;
+	}
+
+	public boolean isDetailField() {
+		return detailField;
+	}
+
+	public void setDetailField(boolean detailField) {
+		this.detailField = detailField;
+	}
+
+	public EntityProperty getEntityProperty() {
+		return entityProperty;
+	}
+
+	public void setEntityProperty(EntityProperty entityProperty) {
+		this.entityProperty = entityProperty;
+	}
+
+	public Map<String, List<?>> getAdditionalMap() {
+		return additionalMap;
+	}
+
+	public void setAdditionalMap(Map<String, List<?>> additionalMap) {
+		this.additionalMap = additionalMap;
+	}
+
+	public FormField getFormField() {
+		return formField;
+	}
+
+	public void setFormField(FormField formField) {
+		this.formField = formField;
+	}
+
+	public BaseField getBaseField() {
+		return baseField;
+	}
+
+	public void setBaseField(BaseField baseField) {
+		this.baseField = baseField;
+	}
+
+	public boolean isSkipBaseField() {
+		return skipBaseField;
+	}
+
+	public void setSkipBaseField(boolean skipBaseField) {
+		this.skipBaseField = skipBaseField;
+	}
+
+	public boolean isHasJoinColumn() {
+		return hasJoinColumn;
+	}
+
+	public void setHasJoinColumn(boolean hasJoinColumn) {
+		this.hasJoinColumn = hasJoinColumn;
+	}
+
+	public boolean isGrouped() {
+		return isGrouped;
+	}
+
+	public Field getField() {
+		return field;
+	}
+
+	public boolean isIgnoreBaseField() {
+		return ignoreBaseField;
+	}
+	
+	
 
 }
